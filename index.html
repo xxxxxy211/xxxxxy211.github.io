@@ -78,6 +78,75 @@
         <div class="col-sm-8 blog-main">
           
   
+    <article id="post-第二次组会" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/27/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/">2022.3.22 研0第二次组会</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2022/03/27/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/" class="article-date"><time datetime="2022-03-27T03:09:44.000Z" itemprop="datePublished">2022-03-27</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​        这次组会的时间比较短，只有1个多小时，主要谈论的点还是师兄的毕设。相比上次一的什么也听不懂，这次边听边搜索一些有关的内容，在此作个记录。</p>
+<h2 id="车联网安全的毕设"><a href="#车联网安全的毕设" class="headerlink" title="车联网安全的毕设"></a>车联网安全的毕设</h2><p>1、设计了基于PB的通信模式</p>
+<p>​        上次组会记错了，PB是谷歌的开源信息传输协议。之前在网络上搜索了一下，这种方式对标json的好处是减少冗余信息，通过对齐等手段减少信息数据的大小（不过这数据大小的对比并不绝对，信息传输快慢还与编码解码有关，这就涉及到后续的PB算法）。</p>
+<p>2、关于证书授权部分</p>
+<p>​        通过证书来保证车辆之间的可信安全的通信。一般采用公钥加私钥的加密方式，是一种非对称的加密方式。大概原理就是公钥加密，私钥解密。</p>
+<p>​        数字签名的过程：加密：1、hash函数对内容加密得到内容的hash值；2、对hash值进行私钥加密得到数字签名；验证：3、使用公钥对数字签名解密得到hash值；4、使用hash函数对内容进行加密得到新的hash值；5、解密的hash值与新的hash值比较验证身份。</p>
+<p>​        数字证书是为公钥加密，具体的内容看下面的链接吧。</p>
+<p>​        <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3c5212b47bec">公钥、私钥、签名、数字证书的关系(图文) - 简书 (jianshu.com)</a></p>
+<p>​        关于哈希算法的部分，我认为在应用和学习中存在很大的割裂。我们这里应用的哈希函数指的是满足一定特性的函数（这个特性称为hash的特性），而hash表只是他的检索方面应用之一。在安全加密领域，hash表就没有作用了，我们只需要hash函数生成的独特的hash值就行了。这里我想表达的是我们得脱胎于数据机构中的朴素的思想，别把hash函数和hash表绑定了。下面的教程讲解得很详细：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qR4y1V7g6?spm_id_from=333.337.search-card.all.click">『教程』哈希表是个啥？_哔哩哔哩_bilibili</a></p>
+<p>3、仿真实现</p>
+<p>​        仿真这方面的东西没有具体了解。</p>
+<p>4、组网</p>
+<p>​        模拟1000辆车之间的可信通信，并测试效率，这方面还没有进行测试过。</p>
+<h2 id="5G通信仿真"><a href="#5G通信仿真" class="headerlink" title="5G通信仿真"></a>5G通信仿真</h2><p>​        这个应该是几个研一研二的师兄在做。查阅了一些资料，得到关于OAI的一些基本概念，慢慢明白了师兄们在做的工作——模拟手机通信（基于SIM卡的）。我们都知道手机打电话需要手机卡，还得有信号，其实这就已经说明了整个通信的流程，有sim卡的手机发送信息，基站接受信息并传输信息，另外一台手机接受信息；</p>
+<p>​        OAI根据3GPP的标准，完全实现了LTE协议的核心网（EPC），基站（eNB）和用户（UE）三部分。OAI就是对这三部分进行仿真，实现仿真通信。</p>
+<p>​        核心网等基本概念可以看这个链接：</p>
+<p><a target="_blank" rel="noopener" href="https://tech.hqew.com/fangan_2011346">什么是核心网？核心网是如何定义的？ (hqew.com)</a></p>
+<p>​        OAI的具体说明可以看这个链接：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jxwxg/article/details/58130893">OpenAirInterface OAI 入门教程 1_光光学长的博客-CSDN博客_openairinterface</a></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/27/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/" data-id="cl195mrmo0000fgur1r6ka7by" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-1" class="article article-type-post" itemscope itemprop="blogPost">
 
   <header class="article-header">
@@ -332,7 +401,7 @@
   
   <div class="sidebar-module">
     <h4>Archives</h4>
-    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2022/03/">March 2022</a><span class="sidebar-module-list-count">4</span></li></ul>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2022/03/">March 2022</a><span class="sidebar-module-list-count">5</span></li></ul>
   </div>
 
 
@@ -341,6 +410,10 @@
   <div class="sidebar-module">
     <h4>Recents</h4>
     <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2022/03/27/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%BB%84%E4%BC%9A/">2022.3.22 研0第二次组会</a>
+        </li>
       
         <li>
           <a href="/2022/03/22/1/">记录ORB_SLAM2安装</a>
